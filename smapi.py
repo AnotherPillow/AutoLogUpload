@@ -1,6 +1,7 @@
 import os
 from upload import main as upload_log
 import psutil
+import subprocess
 import time
 
 #smapi_path = "C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\StardewModdingAPI.exe"
@@ -9,7 +10,9 @@ smapi_path = os.getcwd().replace("\\src", "") + "\\StardewModdingAPI.exe"
 
 #os.popen(smapi_path, "r")
 #os.startfile("smapi.bat")
-os.startfile(smapi_path)
+#os.popen("smapi.bat", "r")
+sm = subprocess.Popen(smapi_path, creationflags=subprocess.CREATE_NEW_CONSOLE)
+#os.startfile(smapi_path)
 
 while True:
     time.sleep(1)

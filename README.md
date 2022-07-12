@@ -7,6 +7,7 @@ A tool to automatically upload SMAPI logs when it crashes.
 * urllib3 (`pip install urllib3`)
 * requests (`pip install requests`)
 * time (`pip install time`)
+* subprocess (`pip install subprocess`)
 ## Installation
 Install the dependencies and unzip latest release/update into your game folder.
 
@@ -15,5 +16,4 @@ Install the dependencies and unzip latest release/update into your game folder.
   - Run AutoLogUpload.bat in your game folder.
   - It will automatically upload the log file when the game closes and ask you to open in browser if you wish.
 ## Compiling
-  - Install [py2exe](https://www.py2exe.org/)
-  - Run `py release.py py2exe`
+  - Run `py release.py`

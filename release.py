@@ -18,10 +18,6 @@ def compile_py():
     print("compiled smapi...")
 def copy():
     print("copying...")
-    #copy smapi.bat to dist/
-    # shutil.copy("smapi.bat","dist/src/smapi.bat")
-    # print("copied smapi.bat")
-    #copy upload.py to dist/
     shutil.copy("__pycache__/upload.cpython-38.pyc","dist/src/upload.pyc")
     print("copied upload.pyc")
     #copy smapi.py to dist/
@@ -29,9 +25,14 @@ def copy():
     print("copied smapi.pyc")
     shutil.copy("AutoLogUpload.bat","dist/AutoLogUpload.bat")
     print("copied AutoLogUpload.bat")
+    shutil.copy("config.json","dist/src/config.json")
+    print("copied config.json")
 # compile_exe()
 def zip(version):
     #archive dist/ to dist.zip
+    #delete dist/1.1.0.zip if it exists
+    if os.path.exists("dist/" + version + ".zip"):
+        os.remove("dist/"+ version + ".zip")
     shutil.make_archive("dist","zip","dist")
     print("created archive")
     shutil.move("dist.zip","dist/{0}.zip".format(version))

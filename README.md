@@ -1,24 +1,11 @@
 # AutoLogUpload
-A tool to automatically upload SMAPI logs when it crashes.
-## Requirements
-* [SMAPI](https://www.smapi.io/)
-* [Python 3.8+](https://www.python.org/downloads/)
-* psutil (`pip install psutil`)	
-* urllib3 (`pip install urllib3`)
-* requests (`pip install requests`)
-* time (`pip install time`)
-* subprocess (`pip install subprocess`)
-* json (`pip install json`)
-## Installation
-Install the dependencies and unzip latest release/update into your game folder.
+A tool to automatically upload SMAPI logs upon crashing.
 
-**ALWAYS DELETE LAST VERSION BEFORE INSTALLING A NEW VERSION**
-## Usage
-  - Run AutoLogUpload.bat in your game folder.
-  - It will automatically upload the log file when the game closes and ask you to open in browser if you wish.
+## Installation
+- Unzip the latest release, can go anywhere.
+- Open the `autologupload.config.json` file and edit the `game_path` value to point to your SMAPI install
+- If you wish, change your Steam launch options to point to the `autologupload_rs.exe` file instead SMAPI.
+  
 ## Compiling
-  - Run `py release.py`
-## Configuration
-  - `src/config.json` contains the configuration for the tool.
-## Mac/Linux Support
-Will come soon, shouldn't be hard to implement.
+- Install Rust
+- Run `cargo build --release`
